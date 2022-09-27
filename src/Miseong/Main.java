@@ -1,30 +1,26 @@
 package Miseong;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner inp = new Scanner(System.in);
-        while(true){
-            System.out.print("Enter 4 digits number: ");
-            int i = inp.nextInt();
-            int i1,i2,i3,i4;
-            i4 = i/1000;
-            i3 = (i/100)%10;
-            i2 = (i/10)%10;
-            i1 = i%10;
+        // Special methods for LinkedList
+        LinkedList l = new LinkedList();
 
-        if (i<1000 || i>9999) {
-            System.out.println(i+" is not valid number");
-        }
+        l.add("dog");
+        l.add("dog"); // duplication is allowed in LL
+        l.add("cat");
+        l.add("horse");
 
-        else{
-            if (i4+i3 == i2+i1) {
-                System.out.println(i + " is lucky number");
-            }
-            else {
-                    System.out.println(i+" is not lucky number");
-                }}
-    }}}
+        l.addFirst("Tiger");
+        l.addLast("Elephant");
+        System.out.println(l.getFirst()); // Tiger
+        System.out.println(l.getLast()); // Elephant
+        l.removeFirst();
+        System.out.println(l); // [dog, dog, cat, horse, Elephant]
+    }}
+
+
+
 
 
